@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="home.html">Portfolio</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="home.html" class="nav-link active">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <header class="hero-section">
+            <h1>My Projects</h1>
+            <p>Explore my latest work and creative endeavors</p>
+        </header>
+
+        <section class="projects-grid">
+            <div class="project-card" onclick="navigateToProject('project1')">
+                <div class="project-content">
+                    <div class="project-image">
+                        <div class="image-placeholder">Motion Design</div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Motion Design & Animation</h3>
+                        <p>Motion Designer</p>
+                        <span class="project-category">Motion</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" onclick="navigateToProject('project2')">
+                <div class="project-content">
+                    <div class="project-image">
+                        <div class="image-placeholder">Art Direction</div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Art Direction & Branding</h3>
+                        <p>Art Director</p>
+                        <span class="project-category">Art Direction</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" onclick="navigateToProject('project3')">
+                <div class="project-content">
+                    <div class="project-image">
+                        <div class="image-placeholder">Visual Effects</div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Visual Effects & Compositing</h3>
+                        <p>VFX Artist</p>
+                        <span class="project-category">VFX</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" onclick="navigateToProject('project4')">
+                <div class="project-content">
+                    <div class="project-image">
+                        <div class="image-placeholder">Creative Direction</div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Creative Direction & Strategy</h3>
+                        <p>Creative Director</p>
+                        <span class="project-category">Creative</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html> 
