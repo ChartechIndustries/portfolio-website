@@ -16,9 +16,6 @@
     <meta name="twitter:description" content="Explore our latest projects in motion design, art direction, visual effects, and creative strategy.">
     <link rel="canonical" href="https://chartechindustries.org/home.html">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
     <nav class="navbar">
@@ -27,7 +24,7 @@
                 <a href="home.html">Portfolio</a>
             </div>
             <ul class="nav-menu">
-                <li><a href="home.html" class="nav-link active">Home</a></li>
+                <li><a href="home.html" class="nav-link active">Projects</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
             </ul>
         </div>
@@ -35,59 +32,67 @@
 
     <main class="main-content">
         <header class="hero-section">
-            <h1>My Projects</h1>
+            <h1>Portfolio</h1>
             <p>Explore my latest work and creative endeavors</p>
         </header>
 
-        <section class="projects-grid">
-            <div class="project-card" onclick="navigateToProject('project1')">
-                <div class="project-content">
+        <section class="projects-list">
+            <div class="project-row" onclick="navigateToProject('project1')">
+                <div class="project-image-container">
                     <div class="project-image">
                         <div class="image-placeholder">Motion Design</div>
+                        <div class="project-video-thumbnail">▶</div>
                     </div>
+                </div>
+                <div class="project-info-container">
                     <div class="project-info">
                         <h3>Motion Design & Animation</h3>
-                        <p>Motion Designer</p>
-                        <span class="project-category">Motion</span>
+                        <p class="project-description">Dynamic visual storytelling through motion graphics, character animation, and kinetic typography. Creating engaging content that brings brands and concepts to life.</p>
                     </div>
                 </div>
             </div>
 
-            <div class="project-card" onclick="navigateToProject('project2')">
-                <div class="project-content">
+            <div class="project-row" onclick="navigateToProject('project2')">
+                <div class="project-image-container">
                     <div class="project-image">
                         <div class="image-placeholder">Art Direction</div>
+                        <div class="project-video-thumbnail">▶</div>
                     </div>
+                </div>
+                <div class="project-info-container">
                     <div class="project-info">
                         <h3>Art Direction & Branding</h3>
-                        <p>Art Director</p>
-                        <span class="project-category">Art Direction</span>
+                        <p class="project-description">Strategic brand identity development and creative direction. Crafting visual narratives that establish strong brand presence and emotional connections.</p>
                     </div>
                 </div>
             </div>
 
-            <div class="project-card" onclick="navigateToProject('project3')">
-                <div class="project-content">
+            <div class="project-row" onclick="navigateToProject('project3')">
+                <div class="project-image-container">
                     <div class="project-image">
                         <div class="image-placeholder">Visual Effects</div>
+                        <div class="project-video-thumbnail">▶</div>
                     </div>
+                </div>
+                <div class="project-info-container">
                     <div class="project-info">
                         <h3>Visual Effects & Compositing</h3>
-                        <p>VFX Artist</p>
-                        <span class="project-category">VFX</span>
+                        <p class="project-description">Advanced VFX and compositing work that pushes creative boundaries. Seamlessly integrating digital elements with live action for stunning visual results.</p>
                     </div>
                 </div>
             </div>
 
-            <div class="project-card" onclick="navigateToProject('project4')">
-                <div class="project-content">
+            <div class="project-row" onclick="navigateToProject('project4')">
+                <div class="project-image-container">
                     <div class="project-image">
                         <div class="image-placeholder">Creative Direction</div>
+                        <div class="project-video-thumbnail">▶</div>
                     </div>
+                </div>
+                <div class="project-info-container">
                     <div class="project-info">
                         <h3>Creative Direction & Strategy</h3>
-                        <p>Creative Director</p>
-                        <span class="project-category">Creative</span>
+                        <p class="project-description">Comprehensive creative strategy and direction across multiple platforms. Leading teams to deliver innovative solutions that drive business results.</p>
                     </div>
                 </div>
             </div>

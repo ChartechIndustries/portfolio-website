@@ -1,47 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CharTech Industries - Creative Portfolio</title>
-    <meta name="description" content="Welcome to CharTech Industries - Explore our creative portfolio featuring motion design, art direction, visual effects, and creative strategy.">
-    <meta name="keywords" content="portfolio, motion design, art direction, visual effects, creative director, chartech industries">
-    <meta name="author" content="CharTech Industries">
-    <meta property="og:title" content="CharTech Industries - Creative Portfolio">
-    <meta property="og:description" content="Explore our creative portfolio featuring motion design, art direction, visual effects, and creative strategy.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://chartechindustries.org">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="CharTech Industries - Creative Portfolio">
-    <meta name="twitter:description" content="Explore our creative portfolio featuring motion design, art direction, visual effects, and creative strategy.">
-    <link rel="canonical" href="https://chartechindustries.org">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Landing</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: #181818;
+    }
+    body {
+      width: 100vw;
+      height: 100vh;
+    }
+    #life-canvas {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #181818;
+      z-index: 0;
+    }
+  </style>
 </head>
 <body>
-    <div class="landing-container">
-        <div class="landing-content">
-            <div class="animated-graphic">
-                <div class="graphic-placeholder">
-                    <div class="floating-shapes">
-                        <div class="shape shape-1"></div>
-                        <div class="shape shape-2"></div>
-                        <div class="shape shape-3"></div>
-                        <div class="shape shape-4"></div>
-                    </div>
-                    <div class="center-circle">
-                        <span>Portfolio</span>
-                    </div>
-                </div>
-            </div>
-            <h1 class="landing-title">Welcome to My Portfolio</h1>
-            <p class="landing-subtitle">Explore my work and creative journey</p>
-            <button class="enter-btn" onclick="enterPortfolio()">Enter Portfolio</button>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
+  <canvas id="life-canvas"></canvas>
+  <script src="script.js"></script>
 </body>
 </html> 
