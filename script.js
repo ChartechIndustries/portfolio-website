@@ -32,8 +32,8 @@ function resizeCanvas() {
 }
 
 function centerLogo() {
-  // Scale logo to fit 40% of the smaller canvas dimension
-  const scale = 0.4 * Math.min(canvas.width / logoImg.width, canvas.height / logoImg.height);
+  // Scale logo to fit 60% of the smaller canvas dimension (increased from 40%)
+  const scale = 0.6 * Math.min(canvas.width / logoImg.width, canvas.height / logoImg.height);
   logoW = logoImg.width * scale;
   logoH = logoImg.height * scale;
   logoX = (canvas.width - logoW) / 2;
@@ -57,18 +57,25 @@ function isInLogoWhite(x, y) {
   const ly = y - logoY;
   if (lx < 0 || ly < 0 || lx >= logoW || ly >= logoH) return false;
   const idx = (Math.floor(ly) * logoMask.width + Math.floor(lx)) * 4;
-  // White area: R,G,B all > 200, alpha > 128
+  // More robust white area detection: R,G,B all > 180, alpha > 100
+  // This accounts for anti-aliasing and slight color variations
   return (
-    logoMask.data[idx + 3] > 128 &&
-    logoMask.data[idx] > 200 &&
-    logoMask.data[idx + 1] > 200 &&
-    logoMask.data[idx + 2] > 200
+    logoMask.data[idx + 3] > 100 &&
+    logoMask.data[idx] > 180 &&
+    logoMask.data[idx + 1] > 180 &&
+    logoMask.data[idx + 2] > 180
   );
 }
 
 function draw() {
   ctx.fillStyle = BG_COLOR;
   ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+  // Optional: Draw a subtle outline around the logo area for debugging
+  // Uncomment the next 3 lines if you want to see the logo boundary
+  // ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
+  // ctx.lineWidth = 1;
+  // ctx.strokeRect(logoX, logoY, logoW, logoH);
 
   for (let x = 0; x < cols; x++) {
     for (let y = 0; y < rows; y++) {
